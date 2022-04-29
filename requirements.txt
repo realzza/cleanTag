@@ -1,0 +1,8 @@
+argparse
+torch
+numpy
+tqdm
+soxr
+soundfile
+scipy
+python_speech_features
