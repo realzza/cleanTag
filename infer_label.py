@@ -14,8 +14,8 @@ def parse_args():
     desc="parse model info"
     parser = argparse.ArgumentParser(description=desc)
     parser.add_argument('--vad_file', type=str, required=True)
-    parser.add_argument('--model_dir', type=str, default='emo_model.pth')
     parser.add_argument('--data_dir', type=str, required=True, help="data directory to be labelled")
+    parser.add_argument('--model_dir', type=str, default='emo_model.pth')
     parser.add_argument('--output_json', type=str, required=True)
     parser.add_argument('--process', type=int, default=6, help="multiprocess number")
     parser.add_argument('--device', type=str, default="cuda:4", help="choose from cpu/cuda:n, where n=0,1,2 ... ,7")
