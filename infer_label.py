@@ -132,6 +132,7 @@ def labeling(iii, args):
             rcd_data, sr = sf.read(rcd)
             if sr != 16000:
                 rcd_data = soxr.resample(rcd_data, sr, 16000)
+                sr = 16000
             rcd_voiced = voiced_part[rcd.split('/')[-1]]
             for (start_time, end_time) in rcd_voiced:
                 if end_time - start_time <= 5:
