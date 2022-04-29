@@ -8,3 +8,4 @@ bad_file
 pyr_files/
 */*/.ipynb*
 */*/__pycache__
+SECURITY.md
