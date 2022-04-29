@@ -16,7 +16,7 @@ Adjust the `vad_file` param and code if necessary to adapt to new tasks. Specify
 
 `infer_label.py` adopted multiprocessing, increased cpu/gpu utilities rate and inference efficiency. See usage details below.
 ```
-usage: infer_label.py [-h] --vad_file VAD_FILE --data_dir DATA_DIR [--model_dir MODEL_DIR] --output_json OUTPUT_JSON [--process PROCESS] [--device DEVICE]
+usage: infer_label.py [-h] --vad_file VAD_FILE --data_dir DATA_DIR --output_json OUTPUT_JSON [--model_dir MODEL_DIR] [--process PROCESS] [--device DEVICE]
 
 parse model info
 
@@ -24,8 +24,8 @@ optional arguments:
   -h, --help            show this help message and exit
   --vad_file VAD_FILE
   --data_dir DATA_DIR   data directory to be labelled
-  --model_dir MODEL_DIR
   --output_json OUTPUT_JSON
+  --model_dir MODEL_DIR
   --process PROCESS     multiprocess number
   --device DEVICE       choose from cpu/cuda:n, where n=0,1,2 ... ,7
 ```
