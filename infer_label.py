@@ -1,9 +1,10 @@
 import os
 import json
+import soxr
 import torch
-import librosa
 import argparse
 import numpy as np
+import soundfile as sf
 from tqdm import tqdm
 from module.model import Gvector
 from scipy.special import softmax
@@ -128,7 +129,9 @@ def labeling(iii, args):
         if not rcd.split('/')[-1] in vad_result:
             vad_result[rcd.split('/')[-1]] = {}
         try:
-            rcd_data, sr = librosa.load(rcd, sr=16000)
+            rcd_data, sr = sf.read(rcd)
+            if sr != 16000:
+                rcd_data = soxr.resample(rcd_data, sr, 16000)
             rcd_voiced = voiced_part[rcd.split('/')[-1]]
             for (start_time, end_time) in rcd_voiced:
                 if end_time - start_time <= 5:
