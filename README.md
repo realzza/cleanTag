@@ -2,7 +2,7 @@
 **CleanTag** helps you tag emotion labels in wav stream for Chinese audios.
 ## Environment
 ```bash
-pip install -r requirement.txt
+pip install -r requirements.txt
 ```
 ## Data
 We used [Emotional Speech Dataset (ESD) for Speech Synthesis and Voice Conversion](https://github.com/HLTSingapore/Emotional-Speech-Data) from HLT Singapore.
